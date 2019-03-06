@@ -125,9 +125,9 @@ end
 def shoe_size(player)
   data = game_hash
   if data[:home][:players][player]
-    data[:home][:players][player][:shoe_size]
+    data[:home][:players][player][:shoe]
   else
-    data[:away][:players][player][:shoe_size]
+    data[:away][:players][player][:shoe]
   end
 end
 
