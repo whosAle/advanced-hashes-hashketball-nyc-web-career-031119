@@ -131,7 +131,7 @@ def team_colors(team)
   end
 end
 
-def team_names(team)
+def team_names
   data = game_hash
 end
 
