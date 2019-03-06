@@ -138,12 +138,12 @@ def team_names
   names
 end
 
-def player_numbers(player)
+def player_numbers(team)
   data = game_hash
-  if data[:home][:players][player]
-    data[:home][:players][player][:number]
+  if data[:home][:team] == team
+    data[:home][:players].collect { |k,v| v[:number] }
   else
-    data[:away][:players][player][:number]
+    data[:away][:players].collect { |k,v| v[:number] }
   end
 end
 
