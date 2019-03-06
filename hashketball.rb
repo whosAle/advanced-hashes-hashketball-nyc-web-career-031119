@@ -167,4 +167,8 @@ end
 
 def big_shoe_rebounds
   data = game_hash
+  biggest_shoe = 0
+  number = 0
+
+  data.each {|k,v| v[:players].each {|name, stats| number = stats[:rebounds] if stats[:shoe_size] > biggest_shoe}}
 end
