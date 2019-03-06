@@ -122,8 +122,13 @@ def num_points_scored(player)
   end
 end
 
-def shoe_size
+def shoe_size(player)
   data = game_hash
+  if data[:home][:players][player]
+    data[:home][:players][player][:shoe_size]
+  else
+    data[:away][:players][player][:shoe_size]
+  end
 end
 
 def team_colors(team)
