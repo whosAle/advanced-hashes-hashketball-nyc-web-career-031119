@@ -170,7 +170,7 @@ def big_shoe_rebounds
   biggest_shoe = 0
   number = 0
 
-  data.each {|k,v| v[:players].each {|name, stats| number = stats[:rebounds] if stats[:shoe_size] > biggest_shoe}}
+  data.each {|k,v| v[:players].each {|name, stats| number = stats[:rebounds] if stats[:shoe] > biggest_shoe}}
 
   number
 end
