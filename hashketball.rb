@@ -113,30 +113,36 @@ def game_hash
 
 end
 
-def num_points_scored
-
+def num_points_score(player)
+  data = game_hash
+  
 end
 
 def shoe_size
-
+  data = game_hash
 end
 
 def team_colors(team)
-
+  data = game_hash
+  if data[:home][:team] == team
+    data[:home][:colors]
+  else
+    data[:away][:colors]
+  end
 end
 
 def team_names(team)
-
+  data = game_hash
 end
 
 def player_numbers(player)
-
+  data = game_hash
 end
 
 def player_stats(player)
-
+  data = game_hash
 end
 
 def big_shoe_rebounds
-
+  data = game_hash
 end
