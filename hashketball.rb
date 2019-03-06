@@ -115,7 +115,11 @@ end
 
 def num_points_scored(player)
   data = game_hash
-
+  if data[:home][:players][player]
+    data[:home][:players][player][:points]
+  else
+    data[:away][:players][player][:points]
+  end
 end
 
 def shoe_size
