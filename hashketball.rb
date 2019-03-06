@@ -149,6 +149,11 @@ end
 
 def player_stats(player)
   data = game_hash
+  if data[:home][:players][player]
+    data[:home][:players][player]
+  else
+    data[:away][:players][player]
+  end
 end
 
 def big_shoe_rebounds
