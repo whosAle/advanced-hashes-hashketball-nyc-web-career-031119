@@ -135,6 +135,7 @@ def team_names
   data = game_hash
   names = []
   data.each {|k, v| names << v[:team_name]}
+  names
 end
 
 def player_numbers(player)
