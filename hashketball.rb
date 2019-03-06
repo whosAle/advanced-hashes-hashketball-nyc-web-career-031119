@@ -1,4 +1,3 @@
-# Write your code here!
 def game_hash
   match_hash = {
     home: {
