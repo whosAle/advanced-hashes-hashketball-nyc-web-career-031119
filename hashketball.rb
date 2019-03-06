@@ -140,6 +140,11 @@ end
 
 def player_numbers(player)
   data = game_hash
+  if data[:home][:players][player] 
+    data[:home][:players][player][:number]
+  else
+    data[:away][:players][player][:number]
+  end
 end
 
 def player_stats(player)
