@@ -124,7 +124,7 @@ end
 
 def team_colors(team)
   data = game_hash
-  if data[:home][:team] == team
+  if data[:home][:team_name] == team
     data[:home][:colors]
   else
     data[:away][:colors]
@@ -140,7 +140,7 @@ end
 
 def player_numbers(team)
   data = game_hash
-  if data[:home][:team] == team
+  if data[:home][:team_name] == team
     data[:home][:players].collect { |k,v| v[:number] }
   else
     data[:away][:players].collect { |k,v| v[:number] }
